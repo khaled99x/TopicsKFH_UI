@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 70px;
+  pointer-events: none;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.customBorder .MuiOutlinedInput-notchedOutline {
+  border-radius:15px;
+  background-color: #f0f0f0;
+}
+
+.bordersuccess .MuiOutlinedInput-notchedOutline{
+  border-color:#128754;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 15px;
+margin-right:40px;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#88c3a8;
+  border-radius: 4px;
+}
+.MuiCheckbox-root svg path{
+  stroke:lightgray;
+}
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #CCCCCC;
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+  background-color: white;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background:#CCCCCC;
+}
+.control input:checked ~ .control__indicator {
+  background: #128754;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #128754;
+}
+.control input:disabled ~ .control__indicator {
+  background: #CCCCCC;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+.noborder:after,.noborder::before{
+  border-bottom: 0px !important;
+}
+.noborder .MuiSelect-select{
+  padding-top: 10px;
+}
